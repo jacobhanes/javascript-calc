@@ -21,12 +21,22 @@
     display: inline-block;
 }
 
+#btnBox {
+    
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 300px;
+    padding-left: 45px;
+}
+
 h1 {
     margin: 5px;
 }
     
 .btn {
-    width: 10%;
-    height: 10%;
-    margin: 4.5%;
+    width: 17.5%;
+    height: 17.5%;
+    margin: 10px;
+    border-radius: 33%;
 }
