@@ -21,12 +21,32 @@ initializeCalc = () => {
 }
 
 numFunction = () => {
-
+    console.log("aye");
     if (isCalculated) {
         return false;
       }
 
     if (isOperatorChosen){
-        
-    }  
-}
+        secondNum += document.getElementsByClassName("num").value;
+        document.getElementById("secondNumber").innerHTML = secondNum;
+    }
+    else {
+        firstNum += document.getElementsByClassName("num").value;
+        document.getElementById("firstNumber").innerHTML = firstNum;
+    }
+    //gotta pass this through the number buttons to test if it works  
+};
+
+operatorFunction = () => {
+    console.log("aye");
+
+    if (!firstNumber || isCalculated) {
+        return false;
+      }
+    
+      isOperatorChosen = true;
+      operator = document.getElementsByClassName("operators").value;
+      document.getElementById("operator").innerHTML = operator;
+
+};
+
