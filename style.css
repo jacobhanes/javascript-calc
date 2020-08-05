@@ -13,7 +13,7 @@
 #numField {
     background-color: bisque;
     width: 80%;
-    min-height: 100px;
+    min-height: 120px;
     margin-right: 10%;
     margin-left: 10%;
     border-radius: 10px;
@@ -32,6 +32,7 @@
 
 h1 {
     margin: 5px;
+    height: 25px;
 }
     
 .btn {

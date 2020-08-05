@@ -15,4 +15,18 @@ initializeCalc = () => {
     result = 0;
     isOperatorChosen = false;
     isCalculated = false;
+
+    let selected = document.getElementsByTagName("H1")
+    while(wrap.firstChild) wrap.removeChild(wrap.firstChild); //not sure if this works//
+}
+
+numFunction = () => {
+
+    if (isCalculated) {
+        return false;
+      }
+
+    if (isOperatorChosen){
+        
+    }  
 }
