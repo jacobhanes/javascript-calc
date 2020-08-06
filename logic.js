@@ -20,18 +20,18 @@ initializeCalc = () => {
     while(wrap.firstChild) wrap.removeChild(wrap.firstChild); //not sure if this works//
 }
 
-numFunction = () => {
-    console.log("aye");
+numFunction = (value) => {
+    console.log(value);
     if (isCalculated) {
         return false;
       }
 
     if (isOperatorChosen){
-        secondNum += document.getElementsByClassName("num").value;
+        secondNum += value;
         document.getElementById("secondNumber").innerHTML = secondNum;
     }
     else {
-        firstNum += document.getElementsByClassName("num").value;
+        firstNum += value;
         document.getElementById("firstNumber").innerHTML = firstNum;
     }
     //gotta pass this through the number buttons to test if it works  
