@@ -40,7 +40,7 @@ numFunction = (value) => {
 operatorFunction = (value) => {
     console.log(value);
 
-    if (!firstNumber || isCalculated) {
+    if (!firstNum || isCalculated) {
         return false;
       }
     
@@ -49,4 +49,32 @@ operatorFunction = (value) => {
       document.getElementById("operator").innerHTML = operator;
 
 };
+
+equalFunction = () => {
+    console.log("yay")
+    if (isCalculated) {
+        return false;
+    }
+
+    isCalculated = true;
+    firstNum = parseInt(firstNum);
+    secondNum = parseInt(secondNum);
+
+    if (operator === "+") {
+        result = firstNum + secondNum;
+    }
+    else if (operator === "-") {
+        result = firstNum - secondNum;
+    }
+    else if (operator === "x") {
+        result = firstNum * secondNum;
+    }
+    else if (operator === "/") {
+        result = firstNum / secondNum;
+    }
+
+    document.getElementById("result").innerHTML = result;
+};
+
+
 
