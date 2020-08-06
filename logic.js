@@ -37,15 +37,15 @@ numFunction = (value) => {
     //gotta pass this through the number buttons to test if it works  
 };
 
-operatorFunction = () => {
-    console.log("aye");
+operatorFunction = (value) => {
+    console.log(value);
 
     if (!firstNumber || isCalculated) {
         return false;
       }
     
       isOperatorChosen = true;
-      operator = document.getElementsByClassName("operators").value;
+      operator = value;
       document.getElementById("operator").innerHTML = operator;
 
 };
