@@ -9,6 +9,7 @@ let isOperatorChosen = false;
 let isCalculated = false;
 
 initializeCalc = () => {
+    console.log("working")
     firstNum = 0;
     secondNum = 0;
     operator = "";
@@ -17,7 +18,9 @@ initializeCalc = () => {
     isCalculated = false;
 
     let selected = document.getElementsByTagName("H1")
-    while(wrap.firstChild) wrap.removeChild(wrap.firstChild); //not sure if this works//
+    while (selected.firstChild) {
+        selected.removeChild(selected.firstChild);
+    };
 }
 
 numFunction = (value) => {
@@ -76,5 +79,9 @@ equalFunction = () => {
     document.getElementById("result").innerHTML = result;
 };
 
+clearFunction = () => {
+    initializeCalc();
+};
 
+initializeCalc();
 
