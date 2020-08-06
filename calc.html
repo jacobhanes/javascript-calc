@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <title>Javascript Calc</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src="./logic.js"></script>
+    
 </head>
   
 <body>
 <div id="container">
     <div id="numField">
-        <h1 id="firstNumber"></h1>
-        <h1 id="operator"></h1>
-        <h1 id="secondNumber"></h1>
+        <h1 id="firstNumber" class="digits">0</h1>
+        <h1 id="operator" class="digits"></h1>
+        <h1 id="secondNumber" class="digits"></h1>
         <hr>
-        <h1 id="result"></h1>
+        <h1 id="result" class="digits"></h1>
     </div>
     <div id="btnBox">
 
         <button class="btn clear" value="clear" onclick="clearFunction()">C</button>
         <button class="btn symbol" value="brackets">()</button>
-        <button class="btn symbol" value="percentage">%</button>
+        <button class="btn symbol" value="^" onclick="operatorFunction(this.value)">^</button>
         <button class="btn operators" value="/" onclick="operatorFunction(this.value)">&divide;</button>
         <button class="btn num" value="7" onclick="numFunction(this.value)">7</button>
         <button class="btn num" value="8" onclick="numFunction(this.value)">8</button>
@@ -41,6 +41,6 @@
     </div>
 </div>
   
-
+<script src="./logic.js"></script>
 </body>
 </html>

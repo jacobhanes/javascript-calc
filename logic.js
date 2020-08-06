@@ -1,6 +1,3 @@
-const numButtons = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const operators = ["+", "-", "x", "/", "="];
-
 let firstNum = 0;
 let secondNum = 0;
 let operator = "";
@@ -9,7 +6,7 @@ let isOperatorChosen = false;
 let isCalculated = false;
 
 initializeCalc = () => {
-    console.log("working")
+    
     firstNum = 0;
     secondNum = 0;
     operator = "";
@@ -17,14 +14,14 @@ initializeCalc = () => {
     isOperatorChosen = false;
     isCalculated = false;
 
-    let selected = document.getElementsByTagName("H1")
-    while (selected.firstChild) {
-        selected.removeChild(selected.firstChild);
-    };
+    document.getElementById("firstNumber").innerHTML = 0;
+    document.getElementById("secondNumber").innerHTML = 0;
+    document.getElementById("result").innerHTML = 0;
+    document.getElementById("operator").innerHTML = "";
 }
 
 numFunction = (value) => {
-    console.log(value);
+    
     if (isCalculated) {
         return false;
       }
@@ -37,12 +34,11 @@ numFunction = (value) => {
         firstNum += value;
         document.getElementById("firstNumber").innerHTML = firstNum;
     }
-    //gotta pass this through the number buttons to test if it works  
+     
 };
 
 operatorFunction = (value) => {
-    console.log(value);
-
+    
     if (!firstNum || isCalculated) {
         return false;
       }
@@ -54,7 +50,7 @@ operatorFunction = (value) => {
 };
 
 equalFunction = () => {
-    console.log("yay")
+    
     if (isCalculated) {
         return false;
     }
@@ -74,6 +70,9 @@ equalFunction = () => {
     }
     else if (operator === "/") {
         result = firstNum / secondNum;
+    }
+    else if (operator === "^") {
+        result = Math.pow(firstNum, secondNum);
     }
 
     document.getElementById("result").innerHTML = result;
