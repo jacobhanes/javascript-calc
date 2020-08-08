@@ -74,6 +74,9 @@ equalFunction = () => {
     else if (operator === "^") {
         result = Math.pow(firstNum, secondNum);
     }
+    else if (operator === "%"){
+        result = firstNum * secondNum / 100;
+    }
 
     document.getElementById("result").innerHTML = result;
 };

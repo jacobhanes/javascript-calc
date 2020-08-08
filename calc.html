@@ -10,7 +10,7 @@
 <body>
 <div id="container">
     <div id="numField">
-        <h1 id="firstNumber" class="digits">0</h1>
+        <h1 id="firstNumber" class="digits"></h1>
         <h1 id="operator" class="digits"></h1>
         <h1 id="secondNumber" class="digits"></h1>
         <hr>
@@ -19,7 +19,7 @@
     <div id="btnBox">
 
         <button class="btn clear" value="clear" onclick="clearFunction()">C</button>
-        <button class="btn symbol" value="brackets">()</button>
+        <button class="btn symbol" value="%" onclick="operatorFunction(this.value)">%</button>
         <button class="btn symbol" value="^" onclick="operatorFunction(this.value)">^</button>
         <button class="btn operators" value="/" onclick="operatorFunction(this.value)">&divide;</button>
         <button class="btn num" value="7" onclick="numFunction(this.value)">7</button>
@@ -36,7 +36,7 @@
         <button class="btn operators" value="+" onclick="operatorFunction(this.value)">+</button>
         <button class="btn symbol" value="negitive">-/+</button>
         <button class="btn num" value="0" onclick="numFunction(this.value)">0</button>
-        <button class="btn symbol" value="decimal">.</button>
+        <button class="btn symbol" value="." >.</button>
         <button class="btn calc" value="equals" onclick="equalFunction()">=</button>
     </div>
 </div>
